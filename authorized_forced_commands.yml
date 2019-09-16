@@ -1,0 +1,10 @@
+type: linux
+commands:
+  - path: ls
+    description: ls command
+    env: null
+  - path: test
+    description: test command
+    env:
+      - VAR1: /var1/value
+      - VAR2: value2
