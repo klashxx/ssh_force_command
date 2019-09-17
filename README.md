@@ -25,9 +25,11 @@ The binary should be set as the forced command in `~/.ssh/authorized_keys`,  and
 Goals:
 
 1. Improve external access **safety**.
+
   The launcher is compiled and the configuration file is checked using the same security patterns as the rest of the ssh machinery.
 
 2. Simplify the **management** of allowed commands.
+
   By standardize the configuration yaml file, way more easy and flexible than a random piped separated text file  
 
 ## Installation
