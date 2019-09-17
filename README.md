@@ -37,7 +37,7 @@ Obviously you need [`go`](https://golang.org/doc/install) installed in your mach
 Then just:
 
 ```bash
-go get -v github.com/klashxx/forced_comand
+go get -v github.com/klashxx/ssh_force_command
 ````
 
 And the executable will be compiled and placed in your `$GOPATH/bin` directory.
