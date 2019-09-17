@@ -1,10 +1,10 @@
-type: linux
+tag: test
 commands:
-  - path: ls
-    description: ls command
-    env: null
-  - path: test
-    description: test command
+  - path: ~/test_ssh_force_command.sh arg1 arg2
+    description: adding env vars
     env:
-      - VAR1: /var1/value
-      - VAR2: value2
+      - VAR1=/var1/value
+      - VAR2=foo
+  - path: ls
+    description: a simple ls
+    env: null
