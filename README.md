@@ -20,7 +20,7 @@ Requires _Public key authentication_:
 
 This software is based in two elements, and **executable** and a **config file** written in [*yaml*](https://en.wikipedia.org/wiki/YAML).
 
-The binary should be set as the forced command in `~/.ssh/authorized_keys`,  and `~/.ssh/authorized_forced_commands.yml` must store the allowed actions for this particular public. key  
+The binary should be set as the forced command in `~/.ssh/authorized_keys`,  and `~/.ssh/authorized_forced_commands.yml` must store the allowed actions for this particular *public key*.  
 
 Goals:
 
@@ -30,7 +30,7 @@ Goals:
 
 2. Simplify the **management** of allowed commands.
 
-  By standardize the configuration yaml file, way more easy and flexible than a random piped separated text file  
+  By standardize the configuration yaml file, way more easy and flexible than a random piped separated text file.
 
 ## Installation
 
@@ -69,7 +69,7 @@ commands:
       - VAR2=value2
 ```
 
-**NOTE**:  `ssh_force_command` uses the current process's environment, if  `env` is  *NOT* null listed variables will be appended before execution 
+**NOTE**:  `ssh_force_command` uses the current process's environment, if  `env` is  *NOT* null listed variables will be appended before execution.
 
 ## Example
 
