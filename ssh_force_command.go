@@ -24,7 +24,7 @@ type authCommands struct {
 		Env         []string `json:"env"`
 		Path        string   `json:"path"`
 	} `json:"commands"`
-	Type string `json:"type"`
+	Tag string `json:"tag"`
 }
 
 func checkPermissions(cnfFile string) error {
@@ -98,7 +98,7 @@ func main() {
 
 	err = yaml.Unmarshal(cnfFileReader, &authCommands)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "conf file not valid")
+		fmt.Fprintln(os.Stderr, "conf file not valid: ", err)
 		os.Exit(1)
 	}
 
@@ -118,7 +118,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	cmd := exec.Command(command, commandArgs...)
+	expandedCommandPath, err := homedir.Expand(command)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "can't expand command path: ", err)
+		os.Exit(1)
+	}
+
+	cmd := exec.Command(expandedCommandPath, commandArgs...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
