@@ -126,7 +126,7 @@ Let's add some *env* variables to the config file, and another command:
 ```yaml
 tag: test
 commands:
-  - path: ~/test_ssh_force_command.sh arg1 arg2
+  - path: ~/test_ssh_force_command.sh
     description: adding env vars
     env:
       - VAR1=/var1/value
