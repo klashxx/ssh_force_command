@@ -62,7 +62,7 @@ commands:
   - path: command1
     description: my first desc
     env: null
-  - path: /path/to/command2 arg1 arg2
+  - path: /path/to/command2
     description: my second desc
     env:
       - VAR1=/var1/value
