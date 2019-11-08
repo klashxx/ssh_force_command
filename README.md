@@ -75,7 +75,7 @@ commands:
 
 ### In the remote box
 
-1. Place `ssh_force_command` binary **and** this *test script* in your **HOME** dir:
+1. Place `ssh_force_command` binary **and** this *test script* (named `test_ssh_force_command.sh`) in your **HOME** dir:
 
 ```bash
 #!/bin/bash
